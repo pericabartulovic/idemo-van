@@ -1,0 +1,20 @@
+{
+  "name": "projekt-idemovan",
+  "version": "1.0.0",
+  "description": "application as a journal of kids activity",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "keywords": [
+    "acitivity",
+    "play",
+    "kids"
+  ],
+  "author": "Perica Bartulović",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  }
+}
