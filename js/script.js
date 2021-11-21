@@ -305,6 +305,7 @@ class App {
   _slideOut() {
     loader.classList.remove('loader-in');
     loader.classList.add('loader-out');
+    setTimeout(() => loader.classList.add('hidden'), 3000);
   }
 
   _getPosition() {
