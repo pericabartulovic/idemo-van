@@ -474,7 +474,7 @@ class App {
       (t.target === spring &&
         (proljeceLista.classList.remove('hidden'),
         btnProljece.classList.remove('hidden'),
-        (medjusloj.style = 'background: url(../img/latice.gif);'),
+        (medjusloj.style = 'background: url(latice.ce6edc8c.gif);'),
         btnProljece.addEventListener('click', () => {
           proljeceLista.classList.add('hidden'),
             btnProljece.classList.add('hidden'),
@@ -493,7 +493,7 @@ class App {
         (jesenLista.classList.remove('hidden'),
         btnJesen.classList.remove('hidden'),
         (medjusloj4.style =
-          'background: url(../img/lisce.gif) no-repeat;\n      background-size: cover;'),
+          'background: url(lisce.8bfa1f28.gif) no-repeat;\n      background-size: cover;'),
         btnJesen.addEventListener('click', () => {
           jesenLista.classList.add('hidden'),
             btnJesen.classList.add('hidden'),
@@ -502,7 +502,7 @@ class App {
       t.target === winter &&
         (zimaLista.classList.remove('hidden'),
         btnZima.classList.remove('hidden'),
-        (medjusloj3.style = 'background: url(../img/snijeg.gif);'),
+        (medjusloj3.style = 'background: url(snijeg.259ed2ff.gif);'),
         btnZima.addEventListener('click', () => {
           btnZima.classList.add('hidden'),
             zimaLista.classList.add('hidden'),
@@ -522,3 +522,4 @@ class App {
   }
 }
 const app = new App();
+//# sourceMappingURL=index.9f9b4bca.js.map

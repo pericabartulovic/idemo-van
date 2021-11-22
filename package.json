@@ -15,6 +15,7 @@
   "author": "Perica Bartulović",
   "license": "ISC",
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "parcel": "^2.0.1"
   }
 }
