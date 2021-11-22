@@ -592,7 +592,7 @@ class App {
     if (e.target === spring) {
       proljeceLista.classList.remove('hidden');
       btnProljece.classList.remove('hidden');
-      medjusloj.style = `background: url(../img/latice.ce6edc8c.gif);`;
+      medjusloj.style = `background: url(../img/latice.gif);`;
       btnProljece.addEventListener('click', () => {
         proljeceLista.classList.add('hidden');
         btnProljece.classList.add('hidden');
@@ -614,7 +614,7 @@ class App {
     if (e.target === autumn) {
       jesenLista.classList.remove('hidden');
       btnJesen.classList.remove('hidden');
-      medjusloj4.style = `background: url(../img/latice.ce6edc8c.gif) no-repeat;
+      medjusloj4.style = `background: url(../img/lisce.gif) no-repeat;
       background-size: cover;`;
       btnJesen.addEventListener('click', () => {
         jesenLista.classList.add('hidden');
@@ -625,7 +625,7 @@ class App {
     if (e.target === winter) {
       zimaLista.classList.remove('hidden');
       btnZima.classList.remove('hidden');
-      medjusloj3.style = `background: url(../img/latice.ce6edc8c.gif);`;
+      medjusloj3.style = `background: url(../img/snijeg.gif);`;
       btnZima.addEventListener('click', () => {
         btnZima.classList.add('hidden');
         zimaLista.classList.add('hidden');
