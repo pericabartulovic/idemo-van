@@ -591,8 +591,8 @@ class App {
     // aktiv.click();
     
     if (window.matchMedia("(max-width: 48em").matches) {
-      prsten.classList.toggle('map-prsten');
-      mapa.classList.toggle('map-prsten');
+      prsten.classList.contains('map-prsten') ? prsten.classList.remove('map-prsten') : prsten;
+      mapa.classList.contains('map-prsten') ? mapa.classList.remove('map-prsten') : mapa;
     }
   }
 
