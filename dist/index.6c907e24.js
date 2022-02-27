@@ -99,6 +99,9 @@ const btnProljece = document.querySelector('.btn-proljece');
 const btnLjeto = document.querySelector('.btn-ljeto');
 const btnJesen = document.querySelector('.btn-jesen');
 const btnZima = document.querySelector('.btn-zima');
+const prsten = document.querySelector('.prsten');
+const mapa = document.getElementById('map');
+const btnMap = document.querySelector('.btn-map');
 ///////////////////////////////////////////////////// *** ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////// APP ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////// *** ///////////////////////////////////////////////////
@@ -143,7 +146,7 @@ class App {
             duration: 1.5,
             note: 'Krug oko Kukuljca',
             type: 'bicikliranje',
-            description: 'Bicikliranje 10. travnja'
+            description: 'Bicikl 10. travnja'
         },
         {
             date: '2021-04-10T15:00:00.000Z',
@@ -208,7 +211,7 @@ class App {
             duration: 2,
             note: 'Novo Čiče',
             type: 'bicikliranje',
-            description: 'Bicikliranje 23. kolovoza'
+            description: 'Bicikl 23. kolovoza'
         },
         {
             date: '2020-08-23T15:00:00.000Z',
@@ -260,7 +263,7 @@ class App {
             duration: 3,
             note: 'Patkice',
             type: 'bicikliranje',
-            description: 'Bicikliranje 10. listopada'
+            description: 'Bicikl 10. listopada'
         },
         {
             date: '2021-10-10T15:00:00.000Z',
@@ -345,6 +348,8 @@ class App {
     constructor(){
         this._getPosition();
         this._getLocalStorage();
+        this._prikazListeLjeto();
+        this._mapaOnOff();
         /////////////////////////////////////SAMO ZA TESTIRANJE /////////////////////
         this.#aktivnosti.forEach((aktiv)=>{
             this._renderAktivnost(aktiv);
@@ -580,13 +585,17 @@ class App {
                 duration: 1
             })
         , 2000);
-    // this.#map.setView(aktivnost.coords, 15, {
-    //   animate: true,
-    //   pan: {
-    //     duration: 1,
-    //   },
-    // });
-    // aktiv.click();
+        // this.#map.setView(aktivnost.coords, 15, {
+        //   animate: true,
+        //   pan: {
+        //     duration: 1,
+        //   },
+        // });
+        // aktiv.click();
+        if (window.matchMedia("(max-width: 48em").matches) {
+            prsten.classList.toggle('map-prsten');
+            mapa.classList.toggle('map-prsten');
+        }
     }
     _prikazLista(e2) {
         if (e2.target.parentElement.nextElementSibling.children.length === 0) return;
@@ -600,7 +609,7 @@ class App {
                 medjusloj.style = ``;
             });
         }
-        if (e2.target === summer || e2.target === summerImg) {
+        if (e2.target === summer) {
             ljetoLista.classList.remove('hidden');
             btnLjeto.classList.remove('hidden');
             medjusloj2.style = `
@@ -631,6 +640,30 @@ class App {
                 btnZima.classList.add('hidden');
                 zimaLista.classList.add('hidden');
                 medjusloj3.style = ``;
+            });
+        }
+    }
+    _prikazListeLjeto() {
+        summerImg.addEventListener('click', function() {
+            ljetoLista.classList.remove('hidden');
+            btnLjeto.classList.remove('hidden');
+            medjusloj2.style = `
+            z-index: 0;
+          `;
+            btnLjeto.addEventListener('click', ()=>{
+                ljetoLista.classList.add('hidden');
+                btnLjeto.classList.add('hidden');
+                medjusloj2.style = ``;
+            });
+        });
+    }
+    _mapaOnOff() {
+        if (window.matchMedia("(max-width: 48em").matches) {
+            prsten.classList.add('map-prsten');
+            mapa.classList.add('map-prsten');
+            btnMap.addEventListener('click', function() {
+                prsten.classList.toggle('map-prsten');
+                mapa.classList.toggle('map-prsten');
             });
         }
     }
