@@ -483,7 +483,7 @@ class App {
     aktivnost.type === 'bicikliranje' ? (aktiv = '🚲🚲🚲') : aktivnost.type;
     aktivnost.type === 'romobil' ? (aktiv = '🛴') : aktivnost.type;
     aktivnost.type === 'izlet' ? (aktiv = '🗻') : aktivnost.type;
-    aktivnost.type === 'sanjkanje' ? (aktiv = '❄❄❄ ') : aktivnost.type;
+    aktivnost.type === 'sanjkanje' ? (aktiv = '❄🛷❄ ') : aktivnost.type;
 
     let sat = 'sati';
     aktivnost.duration === 1 ||
