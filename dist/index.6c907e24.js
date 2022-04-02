@@ -515,7 +515,7 @@ class App {
         aktivnost1.type === 'bicikliranje' ? aktiv = '🚲🚲🚲' : aktivnost1.type;
         aktivnost1.type === 'romobil' ? aktiv = '🛴' : aktivnost1.type;
         aktivnost1.type === 'izlet' ? aktiv = '🗻' : aktivnost1.type;
-        aktivnost1.type === 'sanjkanje' ? aktiv = '❄❄❄ ' : aktivnost1.type;
+        aktivnost1.type === 'sanjkanje' ? aktiv = '❄🛷❄ ' : aktivnost1.type;
         let sat = 'sati';
         aktivnost1.duration === 1 || aktivnost1.duration === 21 || aktivnost1.duration === 31 ? sat = 'sat' : aktivnost1.duration;
         aktivnost1.duration === 2 || aktivnost1.duration === 22 || aktivnost1.duration === 32 ? sat = 'sata' : aktivnost1.duration;
